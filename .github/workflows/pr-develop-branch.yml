@@ -108,6 +108,9 @@ jobs:
                   echo y | sfdx plugins:install sfdx-git-delta
                   sfdx plugins 
 
+            # Update
+            - name: 'Updating system'
+              run: apt-get update
             # Install java as it is required for the next step
             - name: 'Installing java'
               run: sudo apt-get install openjdk-8-jdk
