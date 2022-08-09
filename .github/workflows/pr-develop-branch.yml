@@ -145,32 +145,32 @@ jobs:
               shell: bash
               run: |
                   key="-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAxHHoUlopAiAT1dy2ZMBUaA+NQ3/qH+/598+YXJ6ga3fEiR2B
-zSYh2vTXoVIM4nmclBfWKBeVKriUVa9fJgqKDdhvEs/dSOiWO4/Y1xwjL0yEHahS
-0CTzYFV6HJrCMlBCHTHwiSFcYgzgnJBkh4b2ZD55MotGr6YYxxX7Do1mr5ZuUP8f
-Nsg/o7/smKlW7CZK+6xbOslWjCtRApUeV500uFcuW4/uz0s5hsiXAs/z8cnJI0ry
-XP8MXcKAWkd7OvFeGVaiFGEgeTRceyPVnb4+vsZaYBR6qBaj9w1VT/gT9OhXHcxc
-RGNdJLjkqkFjCiTYoGW0gWe9UaeXzChQhuLKDwIDAQABAoIBAA91/5jrq6qVJ7p/
-QoOvd3UxNCcJ3D1jP8M3PYCco3eR15ALGHoy9BsthgMWWBlDBQXK0noZUQ4ptNMB
-mHWAAtmQHT3XykzAsYJCkghsGIDSfttusgXbwqPkVlYGAB7BnlJ56bqBO6oj5VGt
-M5xPDPlayWMm/ws4AV855aaBjoFnLDYi0SSa0ItFRt/i7+gQ4FG+fnhcBoCL7RsU
-2rD3SteY6DPQTAljyMM6V0N/LyVgU/sr7d3Y/hD82PXsEHfBjgZxm4i6ucY3Lq9k
-5FgmmZAVDU9Z9qqA8F115dUfywkudeYtFwD+SqAr4LDA3xmB/a3RU4gwr6cmVZ01
-Rg9sG7ECgYEA6kkfoqRsxQOxk4KLpsqoOy03iFF+9krhaQn8xbdzARA5Fr+Iawlz
-iSm92M29Ff3j83ntHODBn3tD9RZaLkMaSINFr+CMGxBqBw4kwLnw9qLY54fwelbP
-p8R5izIyVoSuakJFn0S768NsnbD3c788wO6DVKaJAtvL4TKuy7G7xKMCgYEA1qbw
-5LpDZnh1ea+vhBt/bqvfUp7q8PPXknSTsS1q1OpWrqcF1a46DR/XTNtRRY5HPmjA
-Jv3VzHnsupNizxx3mplcMFMWT7X4P3XAqHFN8OwNV6BKnSFaTGHpr/WW4Tlb0dOJ
-QrPArLdu+gNvdqs8tIpT3VkF2IuY+G8LkkxCj6UCgYBElW1mXj3dGqy0IuYgyHih
-AiaciEbjcJ418o+FjaNj70zXBPC5bMXepFKIEgpFUtKVJt8rsfvcZOhK6eUyX8Bk
-89DFoLVDAvYW5KQLqyMIADoA5UGXfqxBT3nJLsOfoi2wu3/IFQXyCX5VV0XJI3V0
-gR3+/NVk+dTgMscKqBfwgwKBgCpH1dln6xDLF3Cxr2PZOr+k8SdIEEUH8uVxOwpC
-RPHNeueKFLcjS2H8bJ9B7/9AaD4dygOkKjHNrliN4X+kPtbf8G3AX/uxf0WYvysu
-rkiPZo1lEG1k/XFgM/Sp7l9Mug5ZmYbe+0vKEf0DIjiAwENbn+tQtrsRvD7rOJ9H
-kDDVAoGBAKBQ4q54GnBqYTqZQX6fq/49a5sQ8akig8NJiOGICMnS/MgGbjbv02La
-Apccd1RRK4VOvvurZVgQmUFb1GhSIN6oWP7qXqqY1WDC+kIRk9r3H+Gj+xuWX49W
-4bvdawjIGMpKTxLs3OTVN6siAfFv1P97l4JCJjrcvHhY5SfZc5OY
------END RSA PRIVATE KEY-----"
+                    MIIEowIBAAKCAQEAxHHoUlopAiAT1dy2ZMBUaA+NQ3/qH+/598+YXJ6ga3fEiR2B
+                    zSYh2vTXoVIM4nmclBfWKBeVKriUVa9fJgqKDdhvEs/dSOiWO4/Y1xwjL0yEHahS
+                    0CTzYFV6HJrCMlBCHTHwiSFcYgzgnJBkh4b2ZD55MotGr6YYxxX7Do1mr5ZuUP8f
+                    Nsg/o7/smKlW7CZK+6xbOslWjCtRApUeV500uFcuW4/uz0s5hsiXAs/z8cnJI0ry
+                    XP8MXcKAWkd7OvFeGVaiFGEgeTRceyPVnb4+vsZaYBR6qBaj9w1VT/gT9OhXHcxc
+                    RGNdJLjkqkFjCiTYoGW0gWe9UaeXzChQhuLKDwIDAQABAoIBAA91/5jrq6qVJ7p/
+                    QoOvd3UxNCcJ3D1jP8M3PYCco3eR15ALGHoy9BsthgMWWBlDBQXK0noZUQ4ptNMB
+                    mHWAAtmQHT3XykzAsYJCkghsGIDSfttusgXbwqPkVlYGAB7BnlJ56bqBO6oj5VGt
+                    M5xPDPlayWMm/ws4AV855aaBjoFnLDYi0SSa0ItFRt/i7+gQ4FG+fnhcBoCL7RsU
+                    2rD3SteY6DPQTAljyMM6V0N/LyVgU/sr7d3Y/hD82PXsEHfBjgZxm4i6ucY3Lq9k
+                    5FgmmZAVDU9Z9qqA8F115dUfywkudeYtFwD+SqAr4LDA3xmB/a3RU4gwr6cmVZ01
+                    Rg9sG7ECgYEA6kkfoqRsxQOxk4KLpsqoOy03iFF+9krhaQn8xbdzARA5Fr+Iawlz
+                    iSm92M29Ff3j83ntHODBn3tD9RZaLkMaSINFr+CMGxBqBw4kwLnw9qLY54fwelbP
+                    p8R5izIyVoSuakJFn0S768NsnbD3c788wO6DVKaJAtvL4TKuy7G7xKMCgYEA1qbw
+                    5LpDZnh1ea+vhBt/bqvfUp7q8PPXknSTsS1q1OpWrqcF1a46DR/XTNtRRY5HPmjA
+                    Jv3VzHnsupNizxx3mplcMFMWT7X4P3XAqHFN8OwNV6BKnSFaTGHpr/WW4Tlb0dOJ
+                    QrPArLdu+gNvdqs8tIpT3VkF2IuY+G8LkkxCj6UCgYBElW1mXj3dGqy0IuYgyHih
+                    AiaciEbjcJ418o+FjaNj70zXBPC5bMXepFKIEgpFUtKVJt8rsfvcZOhK6eUyX8Bk
+                    89DFoLVDAvYW5KQLqyMIADoA5UGXfqxBT3nJLsOfoi2wu3/IFQXyCX5VV0XJI3V0
+                    gR3+/NVk+dTgMscKqBfwgwKBgCpH1dln6xDLF3Cxr2PZOr+k8SdIEEUH8uVxOwpC
+                    RPHNeueKFLcjS2H8bJ9B7/9AaD4dygOkKjHNrliN4X+kPtbf8G3AX/uxf0WYvysu
+                    rkiPZo1lEG1k/XFgM/Sp7l9Mug5ZmYbe+0vKEf0DIjiAwENbn+tQtrsRvD7rOJ9H
+                    kDDVAoGBAKBQ4q54GnBqYTqZQX6fq/49a5sQ8akig8NJiOGICMnS/MgGbjbv02La
+                    Apccd1RRK4VOvvurZVgQmUFb1GhSIN6oWP7qXqqY1WDC+kIRk9r3H+Gj+xuWX49W
+                    4bvdawjIGMpKTxLs3OTVN6siAfFv1P97l4JCJjrcvHhY5SfZc5OY
+                    -----END RSA PRIVATE KEY-----"
 
                   #echo "${{ secrets.SERVER_KEY }}" > ./server.key
                   echo "$key" > ./server.key
