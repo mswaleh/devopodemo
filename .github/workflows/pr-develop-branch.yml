@@ -1,3 +1,4 @@
+# Fake update
 # Unique name for this workflow
 name: Validate PR on develop branch
 
@@ -27,7 +28,7 @@ jobs:
         # can specify which OS this VM should run on. 
         # In this case, we are going to run our commands on the latest version
         # of ubuntu
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         if: ${{ github.actor != 'dependabot[bot]' }}
         steps:
             # Now we install nodejs in the VM, and specify version 14
@@ -108,9 +109,13 @@ jobs:
                   echo y | sfdx plugins:install sfdx-git-delta
                   sfdx plugins 
 
+            # Update
+            - name: 'Updating system'
+              run: sudo apt-get update
+              
             # Install java as it is required for the next step
             - name: 'Installing java'
-              run: sudo apt-get install openjdk-8-jdk
+              run: sudo apt-get install openjdk-11-jdk
 
             # Install SFDX scanner
             - name: 'Installing SFDX scanner'
@@ -132,11 +137,23 @@ jobs:
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
               run: |
-                  echo ${{ secrets.SFDX_INTEGRATION_URL}} > ./SFDX_INTEGRATION_URL.txt
+                  #echo ${{ secrets.SFDX_INTEGRATION_URL}} > ./SFDX_INTEGRATION_URL.txt
+                  echo "force://3MVG9A2kN3Bn17hspV8FOdL43zPb11JJKMJ2H1PYPTZDzEg5Y9Ea3E.prBSndGieviSPksqw4sw.KhFRxI9Ik:8DD39D5F67C95C2CBD4CB32A672CEF33E223E9776BC3D51FA5761F1E6B5A11A7:5Aep861z80Xevi74eU9nt_ulvQZZUo_eacelS4Z9uhgxMrv_.lRaTRXbx7Z8fdva2svhc2O55EPdtlpYifLEs23@mslex-dev-ed.my.salesforce.com" > ./SFDX_INTEGRATION_URL.txt
+            # The server key is stored in the Github Secret named SERVER_KEY
+            # so here we store the URL into a text file
+            - name: 'Populate auth file with SERVER_KEY secret of the org'
+              shell: bash
+              env: 
+                  SERVER_KEY: ${{ secrets.SERVER_KEY }}
+              run: |
+                  echo "$SERVER_KEY" > ./server.key              
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
               run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt -s -a integration
+            # Authenticate to org using JWT flow
+            #- name: 'Authenticate to Integration Org'
+            #  run: sfdx auth:jwt:grant --clientid 3MVG9A2kN3Bn17hspV8FOdL43zPb11JJKMJ2H1PYPTZDzEg5Y9Ea3E.prBSndGieviSPksqw4sw.KhFRxI9Ik --jwtkeyfile ./server.key --username lex@mswaleh.com --instanceurl https://mslex-dev-ed.my.salesforce.com -a integration -s
 
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
             # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
