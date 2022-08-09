@@ -144,14 +144,14 @@ jobs:
             - name: 'Populate auth file with SERVER_KEY secret of the org'
               shell: bash
               run: |
-                  echo ${{ secrets.SERVER_KEY}} > server.key
+                  echo "${{ secrets.SERVER_KEY }}" > ./server.key
 
             # Authenticate to org using the URL stored in the text file
             #- name: 'Authenticate to Integration Org'
             #  run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt -s -a integration
             # Authenticate to org using JWT flow
             - name: 'Authenticate to Integration Org'
-              run: sfdx auth:jwt:grant --clientid 3MVG9A2kN3Bn17hspV8FOdL43zPb11JJKMJ2H1PYPTZDzEg5Y9Ea3E.prBSndGieviSPksqw4sw.KhFRxI9Ik --jwtkeyfile server.key --username lex@mswaleh.com --instanceurl https://mslex-dev-ed.my.salesforce.com -a integration -s
+              run: sfdx auth:jwt:grant --clientid 3MVG9A2kN3Bn17hspV8FOdL43zPb11JJKMJ2H1PYPTZDzEg5Y9Ea3E.prBSndGieviSPksqw4sw.KhFRxI9Ik --jwtkeyfile ./server.key --username lex@mswaleh.com --instanceurl https://mslex-dev-ed.my.salesforce.com -a integration -s
 
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
             # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
