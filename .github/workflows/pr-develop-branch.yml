@@ -137,8 +137,9 @@ jobs:
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
               run: |
-                  #echo ${{ secrets.SFDX_INTEGRATION_URL}} > ./SFDX_INTEGRATION_URL.txt
+                  # echo "${{ secrets.SFDX_INTEGRATION_URL }}" > ./SFDX_INTEGRATION_URL.txt
                   echo "force://3MVG9A2kN3Bn17hspV8FOdL43zPb11JJKMJ2H1PYPTZDzEg5Y9Ea3E.prBSndGieviSPksqw4sw.KhFRxI9Ik:8DD39D5F67C95C2CBD4CB32A672CEF33E223E9776BC3D51FA5761F1E6B5A11A7:5Aep861z80Xevi74eU9nt_ulvQZZUo_eacelS4Z9uhgxMrv_.lRaTRXbx7Z8fdva2svhc2O55EPdtlpYifLEs23@mslex-dev-ed.my.salesforce.com" > ./SFDX_INTEGRATION_URL.txt
+                  
             # The server key is stored in the Github Secret named SERVER_KEY
             # so here we store the URL into a text file
             - name: 'Populate auth file with SERVER_KEY secret of the org'
