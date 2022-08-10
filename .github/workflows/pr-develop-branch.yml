@@ -136,10 +136,9 @@ jobs:
             # so here we store the URL into a text file
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
-              env:
-                SFDX_INTEGRATION_URL: ${{ secrets.SFDX_INTEGRATION_URL }}
               run: |
-                  echo $SFDX_INTEGRATION_URL > ./SFDX_INTEGRATION_URL.txt
+                  echo ${{ secrets.SFDX_INTEGRATION_URL }} > ./SFDX_INTEGRATION_URL.txt
+                  
             # The server key is stored in the Github Secret named SERVER_KEY
             # so here we store the URL into a text file
             - name: 'Populate auth file with SERVER_KEY secret of the org'
