@@ -1,8 +1,8 @@
 @isTest
-private with sharing class UtilTest {
+private class UtilTest {
     @isTest static void utilTest() {
-        System.assert(true);
-        System.debug('just a debug');
+        Test.startTest();
         new Util();
+        Test.stopTest();
     }    
 }
