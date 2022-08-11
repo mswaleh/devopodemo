@@ -1,6 +1,6 @@
 @isTest
-private class UtilTest {
-    @isTest static void utilTest() {
+public class UtilTest {
+    static testMethod void utilTest() {
         Test.startTest();
         new Util();
         Test.stopTest();
