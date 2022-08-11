@@ -2,7 +2,7 @@
 public class UtilTest {
     static testMethod void utilTest() {
         Test.startTest();
-        Util.utilMethod();
+        Util.utilMethod(); 
         Test.stopTest();
     }    
 }
