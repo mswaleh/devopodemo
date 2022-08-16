@@ -3,8 +3,5 @@ public with sharing class Util {
         Account a = new Account();
         a.Name = 'MS Inc';
         insert a;
-        System.debug('Util class debug!');
-        System.debug('Util class debug 2!');
-        System.debug('Util class debug 3!');
     }
 }
